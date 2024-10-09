@@ -178,6 +178,7 @@ ul {
   clear: both; }
 
 .profile-pic {
+  display:none;
   margin-top: -5px;
   margin-right: 18px; }
   .profile-pic img {
@@ -230,11 +231,12 @@ ul {
     box-shadow: none; }
     .page .resume-header,
     .page .resume-content {
-      padding: 0 22px 0 34px; }
-  .container {
+      padding: 0 22px 0 34px;
+	  break-inside: avoid; }
+  /* .container {
     page-break-inside: avoid; }
   .work-container .item {
-    page-break-inside: avoid; }
+    page-break-inside: avoid; } */
   .fa-external-link {
     display: none; } }
 
@@ -265,6 +267,12 @@ ul {
     vertical-align: middle;
     width: 139px; }
 
+@media print {
+	.resume-header {
+		break-inside: avoid;
+	}
+}
+
 .references-container .fa {
   font-size: 14px; }
 
@@ -272,13 +280,17 @@ ul {
 	</head>
 	<body>
 		<main id="resume" class="page">
-			<header class="resume-header clearfix">
-			    <div class="profile-header pull-left">
-			        <h1>Krzysztof Buchacz</h1>
-			        <h2>Senior software engineer, leader, manager &amp; entrepreneur.</h2>
-			    </div>
-			</header>
 			<div class="resume-content">
+				<header class="resume-header clearfix">
+					<div class="profile-header pull-left">
+						<h1>Krzysztof Buchacz</h1>
+						<h2>Senior Software Engineer</h2>
+					</div>
+					<div class="profile-pic pull-right">
+						<img src="" alt="profile-pic">
+					</div>
+				</header>
+				<br />
 				<aside class="left-column">
 					<div class="container about-container">
 					    <div class="title">
@@ -310,15 +322,35 @@ ul {
 					                        <div class="keyline"></div>
 					                    </div>                    <ul class="minimal">
 					                            <li><h6>React</h6></li>
+					                            <li><h6>React Native</h6></li>
 					                            <li><h6>NodeJS</h6></li>
+					                            <li><h6>TypeScript</h6></li>
+					                            <li><h6>JavaScript</h6></li>
 					                            <li><h6>PostgreSQL</h6></li>
 					                            <li><h6>MongoDB</h6></li>
-					                            <li><h6>Javascript</h6></li>
-					                            <li><h6>NPM</h6></li>
-					                            <li><h6>Git</h6></li>
-					                            <li><h6>Docker</h6></li>
+					                            <li><h6>RabbitMQ</h6></li>
+					                            <li><h6>GraphQL</h6></li>
 					                            <li><h6>HTML5</h6></li>
 					                            <li><h6>CSS</h6></li>
+					                            <li><h6>Redis</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>DevOps &amp; Cloud</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <ul class="minimal">
+					                            <li><h6>Kubernetes</h6></li>
+					                            <li><h6>Docker</h6></li>
+					                            <li><h6>AWS</h6></li>
+					                            <li><h6>GCP</h6></li>
+					                            <li><h6>Azure</h6></li>
+					                            <li><h6>CI/CD</h6></li>
+					                            <li><h6>Helm</h6></li>
+					                            <li><h6>ArgoCD</h6></li>
+					                            <li><h6>GitLab CI/CD</h6></li>
+					                            <li><h6>GitHub Actions</h6></li>
+					                            <li><h6>Terraform</h6></li>
 					                    </ul>
 					            </section>
 					            <section class="container">
@@ -328,56 +360,25 @@ ul {
 					                    </div>                    <ul class="minimal">
 					                            <li><h6>Leadership</h6></li>
 					                            <li><h6>Technical Expertise</h6></li>
-					                            <li><h6>Risk Management</h6></li>
 					                            <li><h6>Time Management</h6></li>
 					                            <li><h6>JIRA</h6></li>
-					                            <li><h6>Gantt</h6></li>
-					                            <li><h6>Agile</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Team Management</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
 					                            <li><h6>Agile</h6></li>
 					                            <li><h6>Scrum</h6></li>
-					                            <li><h6>Problem solving</h6></li>
-					                            <li><h6>Strategy</h6></li>
+					                            <li><h6>Mentorship</h6></li>
 					                    </ul>
 					            </section>
 					            <section class="container">
 					                    <div class="title">
-					                        <h3>DevOps</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>Kubernetes</h6></li>
-					                            <li><h6>AWS</h6></li>
-					                            <li><h6>GCP</h6></li>
-					                            <li><h6>Okta</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Systems</h3>
+					                        <h3>Systems &amp; Platforms</h3>
 					                        <div class="keyline"></div>
 					                    </div>                    <ul class="minimal">
 					                            <li><h6>Linux</h6></li>
 					                            <li><h6>MacOS</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Tools</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>VSCode</h6></li>
-					                            <li><h6>JIRA</h6></li>
 					                            <li><h6>Google Sheets</h6></li>
-					                            <li><h6>Google Calendar</h6></li>
 					                            <li><h6>Calendly</h6></li>
 					                            <li><h6>Zoom</h6></li>
 					                            <li><h6>Figma</h6></li>
+					                            <li><h6>VSCode</h6></li>
 					                    </ul>
 					            </section>
 					    </div>
@@ -417,7 +418,7 @@ ul {
 					                <h3>Summary</h3>
 					                <div class="keyline"></div>
 					            </div>            <p class="summary">
-					                Experienced software engineer with over 8 years of experience. Lately focused on management roles, yet mostly technical ones. Extensive development experience allowing to see what others can not and excellent problem solving skills in a single package. Passionate about delivering clean, maintainable code and motivating others by setting an example. Skilled in coordinating teams performance, delegating responsibilities and improving processes. Always stressing out the importance of tests and product quality as well as user experience. Worked both for huge enterprises and startups.
+					                Experienced Senior Software Engineer with over 9 years of experience in software development, technical leadership, and DevOps. Highly skilled in designing scalable solutions, implementing CI/CD pipelines, and coordinating cross-functional teams. Adept at driving business value through technical innovation and effective team management. Known for delivering clean, maintainable code and promoting best practices in agile environments. Proven ability to excel in both large enterprises and fast-paced startup environments, ensuring successful project delivery from inception to deployment.
 					            </p>
 					        </div>
 					<div class="container work-container">
@@ -425,6 +426,53 @@ ul {
 					        <h3>Experience</h3>
 					        <div class="keyline"></div>
 					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        <a href="https://greenworlder.com" target="_blank">
+					                            Greenworlder <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">11/2023</span>
+					                        <span class="endDate"> - 09/2024</span>
+					                </h5>
+					            </div>
+					            <h4>Lead Software Engineer</h4>
+					
+					            <p class="summary">Led a team of senior engineers to design and implement core functionalities of a scalable platform, ensuring high standards in software quality and infrastructure management.</p>
+					
+					            <ul>
+					                <li>Designed a scalable architecture for both web and mobile platforms, ensuring high performance and reliability.</li>
+					                <li>Contributed to mobile app development using React Native, integrating advanced features for seamless user experience.</li>
+					                <li>Managed CI/CD pipelines using GitLab CI/CD and GitHub Actions, optimizing build and deployment times.</li>
+					                <li>Helped to orchestrate infrastructure deployments and cluster management using Kubernetes and ArgoCD.</li>
+					                <li>Implemented continuous delivery processes for microservices</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        <a href="https://k0demon.com" target="_blank">
+					                            K0DEMON SP. Z O.O. <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">01/2023</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					            <h4>Founder &amp; CEO</h4>
+					
+					            <p class="summary">Established a specialized software development firm, providing innovative solutions and managing a range of internal and external projects for clients.</p>
+					
+					            <ul>
+					                <li>Designed and developed custom software solutions for clients across multiple industries.</li>
+					                <li>Mentored junior and senior engineers, enhancing team capabilities and performance.</li>
+					                <li>Managed client engagements and led strategic business initiatives.</li>
+					                <li>Implemented efficient DevOps processes for internal and client projects, reducing operational overhead.</li>
+					            </ul>
+					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
 					                <h3 class="bold pull-left">
@@ -439,107 +487,13 @@ ul {
 					            </div>
 					            <h4>Head Of Engineering</h4>
 					
-					            <p class="summary">Technical management with additional responsibilities. Coordinating RnD team strategy with business goals.</p>
+					            <p class="summary">Directed the technical and operational strategy for a team of 15+ engineers, aligning engineering goals with business objectives and ensuring product quality.</p>
 					
 					            <ul>
-					                <li>Made all the way to the top of technical roles within the company</li>
-					                <li>Responsible for a group of 15+ engineers</li>
-					                <li>Partialy responsible for backlog &amp; acting as a Product Owner</li>
-					                <li>Risk management</li>
-					                <li>Ensuring product quality &amp; maintaining internal processes</li>
-					                <li>Personal evaluations, 1:1&#x27;s</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/kaholo/" target="_blank">
-					                            Kaholo <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">11/2021</span>
-					                        <span class="endDate"> - 08/2022</span>
-					                </h5>
-					            </div>
-					            <h4>Software Development Team Lead</h4>
-					
-					
-					            <ul>
-					                <li>Promoted to a new role with new exciting possibilities</li>
-					                <li>Leading team of senior engineers and reporting directly to VP/CTO</li>
-					                <li>Focused on backend in NodeJS/Typescript and DevOps</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/kaholo/" target="_blank">
-					                            Kaholo - Low-Code IT/DevOps Automation Platform <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">02/2020</span>
-					                        <span class="endDate"> - 11/2021</span>
-					                </h5>
-					            </div>
-					            <h4>Senior Fullstack Developer</h4>
-					
-					            <p class="summary">Joined promising DevOps/low-code startup. Together with a small team of senior-level only engineers we created a platform used by huge enterprises.</p>
-					
-					            <ul>
-					                <li>Refactored old code-base</li>
-					                <li>Helping with architectural design</li>
-					                <li>Writing new execution engine of CI/CD platform, fully distributed system</li>
-					                <li>Created Kubernetes &amp; helm configurations</li>
-					                <li>Developed internal Docker work environment</li>
-					                <li>Helped improving user experience</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/kodemon-agency-s-r-l/" target="_blank">
-					                            KODEMON AGENCY S.R.L. <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">03/2022</span>
-					                        <span class="endDate"> - Present</span>
-					                </h5>
-					            </div>
-					            <h4>Founder &amp; CEO</h4>
-					
-					
-					            <ul>
-					                <li>My limited company(sole owner)</li>
-					                <li>Implementing own creative ideas</li>
-					                <li>Working for contractors</li>
-					                <li>Mentoring &amp; managing internal projects</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/getcruise/" target="_blank">
-					                            Cruise LLC <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">04/2019</span>
-					                        <span class="endDate"> - 01/2020</span>
-					                </h5>
-					            </div>
-					            <h4>Software Engineering Contractor</h4>
-					
-					            <p class="summary">Developing security applications. Worked as frontend developer, developed multiple internal projects.</p>
-					
-					            <ul>
-					                <li>On-site onboarding and skills review</li>
-					                <li>Developed internal IAM tool for security</li>
-					                <li>Okta integration</li>
-					                <li>Worked with multinational team all around the world</li>
-					                <li>Followed company policies &amp; used MacOS</li>
+					                <li>Drove technical direction and innovation, creating a strategic roadmap for product development.</li>
+					                <li>Ensured robust product quality through code reviews, testing, and process standardization.</li>
+					                <li>Led major refactoring initiatives, enhancing system performance and maintainability.</li>
+					                <li>Coordinated with product and design teams to prioritize and implement new features.</li>
 					            </ul>
 					        </section>
 					        <section class="item">
@@ -556,8 +510,13 @@ ul {
 					            </div>
 					            <h4>Senior Software Developer</h4>
 					
-					            <p class="summary">Contracted for GM Cruise project. Mostly frontend, but also included some DevOps configs because of having Docker/Jenkins experience.</p>
+					            <p class="summary">Contracted for GM Cruise project. Primarily focused on frontend development with significant contributions to DevOps configurations using Docker and Jenkins.</p>
 					
+					            <ul>
+					                <li>Implemented complex frontend modules for internal applications using React and Redux.</li>
+					                <li>Contributed to Docker and Jenkins-based CI/CD pipelines, streamlining the deployment process.</li>
+					                <li>Collaborated with the backend team to ensure seamless integration of frontend components.</li>
+					            </ul>
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
@@ -573,31 +532,13 @@ ul {
 					            </div>
 					            <h4>Senior Software Developer</h4>
 					
-					            <p class="summary">Developed financial applications for the investment banking.</p>
+					            <p class="summary">Developed high-performance trading applications as part of the investment banking team, focusing on scalable design and user-centric features.</p>
 					
 					            <ul>
-					                <li>Part of the investment banking team</li>
-					                <li>Took part in developing high performance trading platform</li>
-					                <li>Helped with architectural design</li>
-					                <li>Implemented UX vision based on Sketch prototypes</li>
+					                <li>Contributed to the development of a high-frequency trading platform, optimizing performance and reliability.</li>
+					                <li>Collaborated with architects on designing a robust system for financial data processing.</li>
+					                <li>Led the implementation of UX features based on Sketch prototypes to improve the trader&#x27;s user experience.</li>
 					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/luxoft/" target="_blank">
-					                            Luxoft <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">09/2017</span>
-					                        <span class="endDate"> - 03/2019</span>
-					                </h5>
-					            </div>
-					            <h4>Senior Software Developer</h4>
-					
-					            <p class="summary">Contracted internally for UBS Investment Banking project.</p>
-					
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
@@ -611,14 +552,12 @@ ul {
 					            </div>
 					            <h4>Full Stack Developer</h4>
 					
-					            <p class="summary">Developed multiple applications from the scratch. Starting with Java + JS stack, ended up as a full stack JavaScript developer with some DevOps experience as well. Inolved in internal recrutation/education platform.</p>
+					            <p class="summary">Developed a comprehensive recruitment and e-learning platform from scratch. Played a key role as a mentor and technical lead, guiding the development team and designing application architecture.</p>
 					
 					            <ul>
-					                <li>Developed recrutation/e-learning platform with CI/CD functionalities from a scratch</li>
-					                <li>Administered company servers and security</li>
-					                <li>Multiple projects for externally contracted companies</li>
-					                <li>Mentored new hirees</li>
-					                <li>Written all kind of tests, from unit to E2E, mutation and more</li>
+					                <li>Built a complete e-learning and recruitment platform with CI/CD functionalities.</li>
+					                <li>Mentored new hires and conducted technical interviews, establishing a strong development culture.</li>
+					                <li>Designed the overall architecture and led implementation for core platform features.</li>
 					            </ul>
 					        </section>
 					        <section class="item">
@@ -635,10 +574,11 @@ ul {
 					            </div>
 					            <h4>Junior Frontend Developer</h4>
 					
+					            <p class="summary">Contributed to multiple projects for international clients, including oil industry asset management and UK-based educational platforms.</p>
 					
 					            <ul>
-					                <li>First Frontend role, used mostly AngularJS</li>
-					                <li>For some clients, helped developing Java enterprise backends as well</li>
+					                <li>Developed frontend components using AngularJS, gaining foundational experience in modern JavaScript frameworks.</li>
+					                <li>Worked on Java-based backend systems for complex enterprise projects, enhancing the technical stack for clients in the oil industry.</li>
 					            </ul>
 					        </section>
 					        <section class="item">
@@ -653,9 +593,11 @@ ul {
 					            </div>
 					            <h4>Junior Java Developer</h4>
 					
+					            <p class="summary">Participated in a paid internship, contributing to internal projects such as an online education platform and timesheet management tools.</p>
 					
 					            <ul>
-					                <li>Paid intership</li>
+					                <li>Worked on internal projects using Spring, Spring Boot, and Maven.</li>
+					                <li>Gained hands-on experience with Java-based backend systems.</li>
 					            </ul>
 					        </section>
 					</div>
@@ -687,7 +629,7 @@ ul {
 					        <section class="item clearfix">
 					            <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
 					            <blockquote>
-					                Krzysztof is an experienced Fullstack developer with great technical background. At the same time he is a diligent, well organised person with high interpersonal skills. Every company would be happy to have him in his project.
+					                Krzysztof is an experienced Fullstack developer with a strong technical background. He is a diligent, well-organized professional with excellent interpersonal skills. Any company would be fortunate to have him in their project.
 					            </blockquote>
 					
 					            <h5 class="pull-right"> — Roman Schmidt</h5>
